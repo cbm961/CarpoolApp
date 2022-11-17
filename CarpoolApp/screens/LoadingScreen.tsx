@@ -1,43 +1,28 @@
-import React, {type PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  ImageBackground,
-  Image,
-  View,
-  TouchableWithoutFeedback,
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import React from 'react';
+import {StyleSheet, Text, Image, View} from 'react-native';
 
 const LoadingScreen = () => {
-    return (
-      <View style={styles.mainPage}>
-        <View style={styles.headerContent}></View>
-        <View style={styles.mainContent}>
-          <View style={styles.title}>
-            <Text style={styles.titleText}>Carpool Me</Text>
-            <Image source={require('../assets/images/Steering-Wheel-Icon.png')} style={styles.wheelIcon} />
-          </View>
-          <Image source={require('../assets/images/AUB-logo.jpeg')} style={styles.imageLogo} />
+  return (
+    <View style={styles.mainPage}>
+      <View style={styles.headerContent} />
+      <View style={styles.mainContent}>
+        <View style={styles.title}>
+          <Text style={styles.titleText}>Carpool Me</Text>
+          <Image
+            source={require('../assets/images/Steering-Wheel-Icon.png')}
+            style={styles.wheelIcon}
+          />
         </View>
-        <View style={styles.footerContent}>
-            <Text style={styles.footerText}> Powered by AUB students </Text>
-        </View>
+        <Image
+          source={require('../assets/images/AUB-logo.jpeg')}
+          style={styles.imageLogo}
+        />
       </View>
-    )
-
+      <View style={styles.footerContent}>
+        <Text style={styles.footerText}> Powered by AUB students </Text>
+      </View>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -48,9 +33,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#860033',
   },
 
-  headerContent: {
-
-  },
+  headerContent: {},
 
   mainContent: {
     justifyContent: 'center',
@@ -58,8 +41,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 
-  footerContent: {
-  },
+  footerContent: {},
 
   imageLogo: {
     width: 170,
@@ -89,7 +71,7 @@ const styles = StyleSheet.create({
   footerText: {
     color: 'white',
     fontSize: 16,
-  }
+  },
 });
 
 export default LoadingScreen;
