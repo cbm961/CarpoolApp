@@ -33,9 +33,11 @@ import React from 'react';
 import LoadingScreen from './screens/LoadingScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import EmailScreen from './screens/Onboarding/EmailScreen';
+import UserInformationScreen from './screens/Onboarding/UserInformationScreen';
+import UserRoleScreen from './screens/Onboarding/UserRoleScreen';
 
 const App = () => {
-  return <EmailScreen />;
+  return <UserRoleScreen />;
 };
 
 export default App;
