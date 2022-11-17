@@ -31,9 +31,10 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import LoadingScreen from './screens/LoadingScreen'
+import RegisterScreen from './screens/RegisterScreen'
 
 const App = () => {
-    return <LoadingScreen />
+    return <RegisterScreen />
 };
 
 export default App;
