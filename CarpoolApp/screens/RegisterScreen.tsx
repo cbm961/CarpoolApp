@@ -1,50 +1,37 @@
-import React, {type PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  ImageBackground,
-  Image,
-  View,
-  TouchableWithoutFeedback,
-  TouchableOpacity
-} from 'react-native';
-
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+import React from 'react';
+import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native';
 
 const RegisterScreen = () => {
-    return (
-      <View style={styles.mainPage}>
-        <View style={styles.headerContent}>
-            <View style={styles.title}>
-                <Text style={styles.titleText}>Let's Get Started!</Text>
-            </View>
-            <Image source={require('../assets/images/Carpool-Vector.jpg')} style={styles.imageLogo} />
-        </View>
-        <View style={styles.mainContent}>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Register</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Login</Text>
-            </TouchableOpacity>
-        </View>
+  return (
+    <View style={styles.mainPage}>
+      <View style={styles.headerContent}>
+        <Image
+          source={require('../assets/images/Students.jpg')}
+          style={styles.imageLogo}
+        />
+        <Text style={styles.titleText}>Welcome to Carpool Me</Text>
+        <Text style={styles.subtitleText}>Let's get started!</Text>
       </View>
-    )
-
+      <View style={styles.mainContent}>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Sign up</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
+  headerContent: {
+    flex: 2,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   mainPage: {
     flex: 1,
     justifyContent: 'space-around',
@@ -52,21 +39,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
 
-  headerContent: {
-    flex: 1.5,
-    width: '100%',
-    justifyContent: 'center'
-  },
-
   mainContent: {
-    flex: 1.2,
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
   },
 
   imageLogo: {
     width: '100%',
-    height: 270,
+    height: 400,
   },
 
   title: {
@@ -78,28 +60,35 @@ const styles = StyleSheet.create({
   titleText: {
     color: '#860033',
     fontSize: 30,
-    fontWeight: '600',
+    fontWeight: '700',
+    textAlign: 'center',
     marginBottom: 20,
+  },
+
+  subtitleText: {
+    color: '#860033',
+    fontSize: 20,
+    fontWeight: '500',
   },
 
   button: {
     backgroundColor: '#860033',
-    width: 230,
-    marginBottom: 30,
+    width: '90%',
+    marginBottom: 25,
     justifyContent: 'center',
-    borderRadius: 30,
+    borderRadius: 10,
     paddingVertical: 15,
-    shadowOffset: {width: -2, height: 4},  
-    shadowColor: '#171717',  
-    shadowOpacity: 0.3,  
-    shadowRadius: 3,  
+    shadowOffset: {width: -2, height: 4},
+    shadowColor: '#171717',
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
   },
 
   buttonText: {
     color: 'white',
     fontSize: 25,
     textAlign: 'center',
-  }
+  },
 });
 
 export default RegisterScreen;
