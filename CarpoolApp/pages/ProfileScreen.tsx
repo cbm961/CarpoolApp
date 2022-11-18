@@ -1,15 +1,15 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import Tabs from './components/BottomNavBar';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Text } from 'react-native';
 
 
-const App = () => {
+const ProfileScreen = () => {
   return(
-      <NavigationContainer>
-          <Tabs/>
-      </NavigationContainer>
+      <Text>
+        ProfileScreen
+      </Text>
   )
 }
 
-export default App;
+export default ProfileScreen;
