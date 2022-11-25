@@ -8,8 +8,13 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import StackParamList from '../../types';
 
-const UserInformationScreen = () => {
+type Props = NativeStackScreenProps<StackParamList, 'Registration'>;
+
+const UserInformationScreen = (props: Props) => {
+  const {navigation} = props;
   const [firstName, setFirstName] = React.useState('');
   const [lastName, setLastName] = React.useState('');
   // const [selectedValue, setSelectedValue] = React.useState();
@@ -60,7 +65,9 @@ const UserInformationScreen = () => {
             text="Other"
           />
         </View>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Role')}>
           <Text style={styles.buttonText}>Continue</Text>
           <Image
             source={require('../../assets/images/Next-Icon.png')}

@@ -1,36 +1,39 @@
 import React from 'react';
-import {StyleSheet, Text, Image, View} from 'react-native';
-
+import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native';
+import StackParamList from '../t';
 const LoadingScreen = () => {
   return (
-    <View style={styles.mainPage}>
-      <View style={styles.headerContent} />
-      <View style={styles.mainContent}>
-        <View style={styles.title}>
-          <Text style={styles.titleText}>Carpool Me</Text>
+    <TouchableOpacity>
+      <View style={styles.mainPage}>
+        <View style={styles.headerContent} />
+        <View style={styles.mainContent}>
+          <View style={styles.title}>
+            <Text style={styles.titleText}>Carpool Me</Text>
+            <Image
+              source={require('../assets/images/Steering-Wheel-Icon.png')}
+              style={styles.wheelIcon}
+            />
+          </View>
           <Image
-            source={require('../assets/images/Steering-Wheel-Icon.png')}
-            style={styles.wheelIcon}
+            source={require('../assets/images/AUB-logo.jpeg')}
+            style={styles.imageLogo}
           />
         </View>
-        <Image
-          source={require('../assets/images/AUB-logo.jpeg')}
-          style={styles.imageLogo}
-        />
+        <View style={styles.footerContent}>
+          <Text style={styles.footerText}> Powered by AUB students </Text>
+        </View>
       </View>
-      <View style={styles.footerContent}>
-        <Text style={styles.footerText}> Powered by AUB students </Text>
-      </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   mainPage: {
-    flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: '#860033',
+    width: '100%',
+    height: '100%',
   },
 
   headerContent: {},
